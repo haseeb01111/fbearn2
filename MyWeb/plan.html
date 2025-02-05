@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+        }
+
+        .logo-container img {
+            width: 150px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .plans-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Aligning the plan boxes */
+        .plans {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .plan-box {
+            width: 120px;
+            height: 100px;
+            background-color: red;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .plan-box:hover {
+            background-color: darkred;
+            color: white;
+        }
+
+        /* Payment details section */
+        .payment-details {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: lightgray;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .payment-details h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Website Logo -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Website Logo">
+    </div>
+
+    <!-- Plans Section -->
+    <div class="plans-container">
+        <h2>Select Your Plan</h2>
+        <div class="plans">
+            <div class="plan-box" onclick="showDetails('Bronze')">Bronze</div>
+            <div class="plan-box" onclick="showDetails('Silver')">Silver</div>
+            <div class="plan-box" onclick="showDetails('Gold')">Gold</div>
+            <div class="plan-box" onclick="showDetails('Platinum')">Platinum</div>
+            <div class="plan-box" onclick="showDetails('Diamond')">Diamond</div>
+        </div>
+    </div>
+
+    <!-- Payment Details (Hidden Initially) -->
+    <div class="payment-details" id="paymentDetails" style="display: none;">
+        <h3>Payment Information</h3>
+        <p id="paymentText"></p>
+        <button onclick="submitPlan()">Submit Plan</button>
+    </div>
+
+    <script>
+        function showDetails(plan) {
+            let paymentDetails = document.getElementById("paymentDetails");
+            let paymentText = document.getElementById("paymentText");
+
+            // Set Payment Details
+            paymentText.innerHTML = `You selected <strong>${plan}</strong> Plan <br> EASYPAISA: 03303051296`;
+
+            // Show Payment Section
+            paymentDetails.style.display = "block";
+        }
+
+        function submitPlan() {
+            alert("Plan Submitted Successfully! Redirecting to approval page...");
+            window.location.href = "approval.html";  // Redirect to approval page after submission
+        }
+    </script>
+
+</body>
+</html>
+

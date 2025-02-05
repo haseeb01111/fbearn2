@@ -1,0 +1,70 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center Logo */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    width: 100px;
+}
+
+/* Center Forms */
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background: #e60000;
+}
+
+.form-container p {
+    margin-top: 10px;
+}
+
+.form-container a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
